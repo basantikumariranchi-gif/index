@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MineHub Sites — Minecraft Fan Links, Guides &amp; Videos</title>
+<meta name="description" content="MineHub Sites is a fan-made collection of Minecraft links — official sites, redstone guides, building tutorials, enchanting tips, farming, and hand-picked YouTube videos, all in one place.">
+<meta name="keywords" content="minecraft, minecraft links, minecraft guides, redstone, minecraft building, minecraft enchanting, minecraft farming, minecraft videos, minehub sites">
+<meta name="author" content="Atulya Raj Patel">
+<meta name="google-site-verification" content="f8-35IK20VqvHgY2PjhUohjKoqe3Dx30b42zrLSL5Rc">
+<link rel="canonical" href="https://minehubsites.netlify.app/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="MineHub Sites — Minecraft Fan Links, Guides &amp; Videos">
+<meta property="og:description" content="Every Minecraft link you actually need — official sites, redstone, building, enchanting, farming guides, and curated videos.">
+<meta property="og:url" content="https://minehubsites.netlify.app/">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MineHub Sites — Minecraft Fan Links, Guides &amp; Videos">
+<meta name="twitter:description" content="Every Minecraft link you actually need — official sites, redstone, building, enchanting, farming guides, and curated videos.">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='5' fill='%235b9c3e'/%3E%3Crect width='16' height='1' fill='%2379c257'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%233f7229'/%3E%3Crect x='4' y='2' width='1' height='1' fill='%233f7229'/%3E%3Crect x='9' y='1' width='1' height='1' fill='%233f7229'/%3E%3Crect x='12' y='3' width='1' height='1' fill='%233f7229'/%3E%3Crect y='5' width='16' height='11' fill='%237a5230'/%3E%3Crect x='2' y='6' width='1' height='1' fill='%23573a22'/%3E%3Crect x='7' y='8' width='1' height='1' fill='%23573a22'/%3E%3Crect x='11' y='7' width='1' height='1' fill='%23573a22'/%3E%3Crect x='4' y='10' width='1' height='1' fill='%23573a22'/%3E%3Crect x='13' y='11' width='1' height='1' fill='%23573a22'/%3E%3Crect x='9' y='13' width='1' height='1' fill='%23573a22'/%3E%3Crect x='2' y='13' width='1' height='1' fill='%23573a22'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sulfur: #c7d94a;
+    --sulfur-dark: #8a9c2e;
+    --basalt: #4a4038;
+    --ash: #2e2620;
+    --night: #1a1510;
+    --panel: #2b2219;
+    --gold: #e8a83d;
+    --text: #f1ecdd;
+    --text-dim: #b6ab93;
+
+    /* A small fixed set of accents — every icon picks from this list
+       instead of a one-off color, so the grid reads as one palette. */
+    --accent-1: var(--sulfur);
+    --accent-2: #4fb5a3;
+    --accent-3: var(--gold);
+    --accent-4: #9a5fc4;
+    --accent-5: #c14b3a;
+
+    --border-w: 2px;
+    --shadow-w: 3px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--night);
+    background-image: linear-gradient(180deg, #241d15 0%, #1a1510 40%, #120e0a 100%);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+  }
+
+  /* Pixel-block frame: one shared border/shadow treatment for cards and icons */
+  .pixel-border {
+    position: relative;
+    image-rendering: pixelated;
+  }
+  .pixel-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: var(--border-w) solid #000;
+    pointer-events: none;
+    transition: border-color 0.12s ease;
+  }
+
+  header {
+    text-align: center;
+    padding: 56px 20px 40px;
+    position: relative;
+  }
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--sulfur);
+  }
+
+  .logo {
+    image-rendering: pixelated;
+    filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.45));
+    margin-bottom: 18px;
+  }
+
+  .eyebrow {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    opacity: 0.85;
+  }
+
+  h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(22px, 5.5vw, 38px);
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 var(--sulfur-dark);
+  }
+  h1 span { color: var(--sulfur); }
+
+  .subtitle {
+    margin: 20px auto 0;
+    max-width: 440px;
+    color: var(--text-dim);
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 40px 0 16px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10.5px;
+    color: var(--gold);
+  }
+  main > .section-label:first-child { margin-top: 0; }
+  .section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--basalt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 18px;
+    background: var(--panel);
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 0.12s ease;
+  }
+  .card:hover {
+    transform: translate(-1px, -2px);
+  }
+  .card:hover::before {
+    border-color: var(--gold);
+  }
+  .card:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  .card .icon {
+    width: 22px;
+    height: 22px;
+    background: var(--icon-color, var(--basalt));
+  }
+
+  .card .name {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .card .desc {
+    color: var(--text-dim);
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+
+  /* Video tutorial cards */
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .video-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--panel);
+    color: var(--text);
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.12s ease;
+  }
+  .video-card:hover {
+    transform: translate(-1px, -2px);
+  }
+  .video-card:hover::before {
+    border-color: var(--gold);
+  }
+  .video-card:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  .video-card .thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    background: var(--basalt);
+  }
+
+  .video-card .vinfo {
+    padding: 10px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .video-card .vtitle {
+    font-size: 12.5px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  .video-card .vchannel {
+    font-size: 11.5px;
+    color: var(--text-dim);
+  }
+
+  footer {
+    padding: 32px 20px 48px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12px;
+  }
+  footer .note {
+    max-width: 480px;
+    margin: 0 auto 10px;
+    line-height: 1.6;
+  }
+  footer .credit {
+    margin-top: 8px;
+    color: var(--gold);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card { transition: none; }
+    .pixel-border::before { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <svg class="logo" width="64" height="64" viewBox="0 0 16 16" shape-rendering="crispEdges">
+    <!-- grass top -->
+    <rect x="0" y="0" width="16" height="5" fill="#5b9c3e"/>
+    <rect x="0" y="0" width="16" height="1" fill="#79c257"/>
+    <rect x="1" y="1" width="1" height="1" fill="#3f7229"/>
+    <rect x="4" y="2" width="1" height="1" fill="#3f7229"/>
+    <rect x="9" y="1" width="1" height="1" fill="#3f7229"/>
+    <rect x="12" y="3" width="1" height="1" fill="#3f7229"/>
+    <!-- dirt sides -->
+    <rect x="0" y="5" width="16" height="11" fill="#7a5230"/>
+    <rect x="2" y="6" width="1" height="1" fill="#573a22"/>
+    <rect x="7" y="8" width="1" height="1" fill="#573a22"/>
+    <rect x="11" y="7" width="1" height="1" fill="#573a22"/>
+    <rect x="4" y="10" width="1" height="1" fill="#573a22"/>
+    <rect x="13" y="11" width="1" height="1" fill="#573a22"/>
+    <rect x="9" y="13" width="1" height="1" fill="#573a22"/>
+    <rect x="2" y="13" width="1" height="1" fill="#573a22"/>
+    <!-- outline -->
+    <rect x="0" y="0" width="16" height="16" fill="none" stroke="#000" stroke-width="0.6"/>
+  </svg>
+  <div class="eyebrow">UNOFFICIAL FAN HUB</div>
+  <h1>MINE<span>HUB</span> SITES</h1>
+  <p class="subtitle">Everything Minecraft in one place — official sites, the wiki, downloads, and support, plus redstone circuits, building guides, enchanting tips, farming setups, and a hand-picked collection of the best tutorial videos, all sorted and ready whenever you need them.</p>
+</header>
+
+<main>
+
+  <div class="section-label">OFFICIAL SITES</div>
+  <div class="grid">
+    <a class="card pixel-border" href="https://www.minecraft.net" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-1);"></div>
+      <div class="name">Minecraft.net</div>
+      <div class="desc">The official home base — news, store, and account settings.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-2);"></div>
+      <div class="name">Downloads</div>
+      <div class="desc">Get Java Edition, Bedrock Edition, or the launcher.</div>
+    </a>
+    <a class="card pixel-border" href="https://education.minecraft.net" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-3);"></div>
+      <div class="name">Minecraft Education</div>
+      <div class="desc">Classroom-friendly worlds and lesson resources.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.mojang.com" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-4);"></div>
+      <div class="name">Mojang Studios</div>
+      <div class="desc">The developer behind the game — studio news and jobs.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/servers" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-5);"></div>
+      <div class="name">Server List</div>
+      <div class="desc">The official Minecraft Server List — find a community to join.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/download/server" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--basalt);"></div>
+      <div class="name">Host a Server</div>
+      <div class="desc">Free official server software for Java and Bedrock.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/licensed-content" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-1);"></div>
+      <div class="name">Licensed Content</div>
+      <div class="desc">Credits and licensed content used across Minecraft.</div>
+    </a>
+  </div>
+
+  <div class="section-label">LEARN &amp; EXPLORE</div>
+  <div class="grid">
+    <a class="card pixel-border" href="https://minecraft.wiki" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-5);"></div>
+      <div class="name">Minecraft Wiki</div>
+      <div class="desc">Every block, mob, item, and mechanic, documented.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/marketplace" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--basalt);"></div>
+      <div class="name">Marketplace</div>
+      <div class="desc">Official maps, skins, and add-ons from creators.</div>
+    </a>
+    <a class="card pixel-border" href="https://feedback.minecraft.net" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-1);"></div>
+      <div class="name">Feedback Site</div>
+      <div class="desc">Vote on and suggest ideas for future updates.</div>
+    </a>
+  </div>
+
+  <div class="section-label">HELP &amp; SUPPORT</div>
+  <div class="grid">
+    <a class="card pixel-border" href="https://help.minecraft.net" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-2);"></div>
+      <div class="name">Minecraft Help</div>
+      <div class="desc">Account issues, purchases, and troubleshooting.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/community-standards" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-3);"></div>
+      <div class="name">Community Standards</div>
+      <div class="desc">The rules for playing and posting the right way.</div>
+    </a>
+  </div>
+
+  <div class="section-label">COMMUNITY</div>
+  <div class="grid">
+    <a class="card pixel-border" href="https://discord.gg/minecraft" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-4);"></div>
+      <div class="name">Discord</div>
+      <div class="desc">The official Minecraft Discord — chat, events, and dev updates.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.youtube.com/channel/UC1sELGmy5jp5fQUugmuYlXQ" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-5);"></div>
+      <div class="name">YouTube</div>
+      <div class="desc">The official Minecraft channel — trailers, dev diaries, and stories.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.reddit.com/r/Minecraft/" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--basalt);"></div>
+      <div class="name">Reddit</div>
+      <div class="desc">r/Minecraft — builds, discussion, and news from the community.</div>
+    </a>
+    <a class="card pixel-border" href="https://x.com/Minecraft" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-1);"></div>
+      <div class="name">X (Twitter)</div>
+      <div class="desc">Quick updates and announcements from the Minecraft team.</div>
+    </a>
+  </div>
+
+  <div class="section-label">MORE FROM MINECRAFT</div>
+  <div class="grid">
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/about-dungeons" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-2);"></div>
+      <div class="name">Minecraft Dungeons</div>
+      <div class="desc">A dungeon-crawler spin-off set in the Minecraft universe.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/about-legends" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-3);"></div>
+      <div class="name">Minecraft Legends</div>
+      <div class="desc">An action-strategy spin-off — defend the Overworld from the Piglins.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/realms" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-4);"></div>
+      <div class="name">Minecraft Realms</div>
+      <div class="desc">Official, always-on private servers for you and your friends.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/merch" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-5);"></div>
+      <div class="name">Merch Store</div>
+      <div class="desc">Official apparel, figures, and collectibles.</div>
+    </a>
+  </div>
+
+  <div class="section-label">REDSTONE</div>
+  <div class="grid">
+    <a class="card pixel-border" href="https://minecraft.wiki/w/Redstone" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--basalt);"></div>
+      <div class="name">Redstone Wiki</div>
+      <div class="desc">The core mechanics — dust, signal strength, and repeaters.</div>
+    </a>
+    <a class="card pixel-border" href="https://minecraft.wiki/w/Redstone_circuits" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-1);"></div>
+      <div class="name">Redstone Circuits</div>
+      <div class="desc">Logic gates, clocks, and other building-block circuits.</div>
+    </a>
+    <a class="card pixel-border" href="https://minecraft.wiki/w/Tutorials/Redstone_computers" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-2);"></div>
+      <div class="name">Redstone Computers</div>
+      <div class="desc">How players build calculators and computers from redstone.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.reddit.com/r/redstone/" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-3);"></div>
+      <div class="name">r/redstone</div>
+      <div class="desc">Community builds, contraptions, and troubleshooting help.</div>
+    </a>
+  </div>
+
+  <div class="section-label">BLOCKS &amp; BUILDING</div>
+  <div class="grid">
+    <a class="card pixel-border" href="https://minecraft.wiki/w/Block" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-4);"></div>
+      <div class="name">Block List</div>
+      <div class="desc">Every block in the game, from dirt to deepslate.</div>
+    </a>
+    <a class="card pixel-border" href="https://minecraft.wiki/w/Building" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-5);"></div>
+      <div class="name">Building Guide</div>
+      <div class="desc">Tips and techniques for planning and shaping structures.</div>
+    </a>
+    <a class="card pixel-border" href="https://minecraft.wiki/w/Tutorials/House" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--basalt);"></div>
+      <div class="name">House Tutorials</div>
+      <div class="desc">Step-by-step ideas for starter homes and bigger builds.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.reddit.com/r/MinecraftBuilds/" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-1);"></div>
+      <div class="name">r/MinecraftBuilds</div>
+      <div class="desc">Community showcase of builds for inspiration.</div>
+    </a>
+  </div>
+
+  <div class="section-label">OFFICIAL GUIDES</div>
+  <div class="grid">
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/minecraft-tips-for-beginners" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-2);"></div>
+      <div class="name">Tips for Beginners</div>
+      <div class="desc">Official video guides — start here if you're new.</div>
+    </a>
+    <a class="card pixel-border" href="https://help.minecraft.net/hc/categories/12617435230477" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-3);"></div>
+      <div class="name">Game Guides</div>
+      <div class="desc">Official written and video guides from the Help Center.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.minecraft.net/en-us/realms#realms-tutorials" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-4);"></div>
+      <div class="name">Realms Tutorials</div>
+      <div class="desc">How to set up and manage your own Realm.</div>
+    </a>
+    <a class="card pixel-border" href="https://www.youtube.com/channel/UC1sELGmy5jp5fQUugmuYlXQ" target="_blank" rel="noopener">
+      <div class="icon" style="--icon-color: var(--accent-5);"></div>
+      <div class="name">Official YouTube</div>
+      <div class="desc">Dev diaries, trailers, and tutorial playlists.</div>
+    </a>
+  </div>
+
+  <div class="section-label">VIDEOS — BEGINNERS</div>
+  <div class="video-grid">
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=ADU1ycprBg4" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/ADU1ycprBg4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Day 1 in Minecraft — How to Play, Tutorial #1</div>
+        <div class="vchannel">Beginner basics</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=LknJd9rd3NU" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/LknJd9rd3NU/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">The Complete Minecraft Beginners Guide</div>
+        <div class="vchannel">Beginner basics</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=bsqmUfNPygY" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/bsqmUfNPygY/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Surviving Your First Night — Survival Guide</div>
+        <div class="vchannel">Pixlriffs</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=BEH_fMgRNrc" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/BEH_fMgRNrc/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Beginners Guide — Tools, Weapons, Food</div>
+        <div class="vchannel">Beginner basics</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=OozklZXFbDQ" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/OozklZXFbDQ/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Start Your Survival Properly</div>
+        <div class="vchannel">Beginner basics</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=sa8olXpN4Wc" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/sa8olXpN4Wc/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">10 Minecraft Survival Tips for Beginners</div>
+        <div class="vchannel">Beginner basics</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=LFED4kLqIlw" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/LFED4kLqIlw/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">First Days Guide — Survive Day 1</div>
+        <div class="vchannel">Beginner basics</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=bUudx1cPiAA" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/bUudx1cPiAA/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Surviving Your First Night — Survival Guide (S1)</div>
+        <div class="vchannel">Pixlriffs</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=1KKzAwUvIGk" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/1KKzAwUvIGk/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">How To Play Minecraft — Beginner's Guide</div>
+        <div class="vchannel">Beginner basics</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=FdV22yBSECw" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/FdV22yBSECw/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">25 Tips &amp; Tricks Everyone Should Know</div>
+        <div class="vchannel">Beginner basics</div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="section-label">VIDEOS — REDSTONE</div>
+  <div class="video-grid">
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=Duedce11Jaw" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/Duedce11Jaw/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Simple Redstone Tutorial</div>
+        <div class="vchannel">Redstone basics</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=4pRTEDOXJx0" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/4pRTEDOXJx0/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Let's Learn Redstone 01</div>
+        <div class="vchannel">Redstone basics</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=B2esricKcE8" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/B2esricKcE8/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Redstone Builds Everyone Should Know</div>
+        <div class="vchannel">Mumbo Jumbo</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=Sx4flQYPh2Q" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/Sx4flQYPh2Q/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Hidden Piston Door</div>
+        <div class="vchannel">Redstone doors</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=pRL0i7kr_yQ" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/pRL0i7kr_yQ/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Easy Hidden 3x3 Piston Door</div>
+        <div class="vchannel">Redstone doors</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=F8JSDICp8gI" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/F8JSDICp8gI/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Secret Piston Door</div>
+        <div class="vchannel">Redstone doors</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=Go6adMWacpU" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/Go6adMWacpU/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Easiest Piston Door — Hidden 2x2</div>
+        <div class="vchannel">Redstone doors</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=ClZlZYJe8HM" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/ClZlZYJe8HM/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Simple Redstone Flying Machine</div>
+        <div class="vchannel">Flying machines</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=c8eDcD9U9g4" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/c8eDcD9U9g4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Complete Guide to Flying Machines</div>
+        <div class="vchannel">Flying machines</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=1CX1D1iKzoE" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/1CX1D1iKzoE/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Crop Harvesting Flying Machine</div>
+        <div class="vchannel">Flying machines</div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="section-label">VIDEOS — BUILDING</div>
+  <div class="video-grid">
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=gL_4xJ6TO7g" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/gL_4xJ6TO7g/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Ultimate Survival House Tutorial</div>
+        <div class="vchannel">Building</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=H8PnRxZbZqs" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/H8PnRxZbZqs/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">How To Build A Big House</div>
+        <div class="vchannel">Building</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=N2D9TbHDeCY" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/N2D9TbHDeCY/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">How to Build a Modern House (Easy)</div>
+        <div class="vchannel">Building</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=pHgzlegNO1Q" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/pHgzlegNO1Q/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Easy Medieval Survival House</div>
+        <div class="vchannel">Building</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=A0npivBfAGE" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/A0npivBfAGE/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Small Medieval House Tutorial</div>
+        <div class="vchannel">Building</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=1XXpmsOBWpE" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/1XXpmsOBWpE/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Medieval House Tutorial (Easy)</div>
+        <div class="vchannel">Building</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=DRUDua7iLMc" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/DRUDua7iLMc/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Ultimate Medieval Survival House</div>
+        <div class="vchannel">Building</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=sdJ5rSuGtPM" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/sdJ5rSuGtPM/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Cozy Medieval Starter House</div>
+        <div class="vchannel">Building</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=TW8DQxlKrqA" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/TW8DQxlKrqA/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Simple Survival House</div>
+        <div class="vchannel">Building</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=zGfYhB95XY4" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/zGfYhB95XY4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Starter Medieval House</div>
+        <div class="vchannel">Building</div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="section-label">VIDEOS — ENCHANTING</div>
+  <div class="video-grid">
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=I_MJ_rpL1e8" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/I_MJ_rpL1e8/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Enchanting Guide — Best Enchantments</div>
+        <div class="vchannel">Enchanting</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=7wAJhE0zfkQ" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/7wAJhE0zfkQ/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Ultimate Enchanting Guide</div>
+        <div class="vchannel">Enchanting</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=BfkoMaJRtw4" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/BfkoMaJRtw4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">How to Enchant in Minecraft</div>
+        <div class="vchannel">Enchanting</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=3-yU3gGRQ8Y" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/3-yU3gGRQ8Y/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Enchantment Guide — Hardcore Room</div>
+        <div class="vchannel">Enchanting</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=n3cBYk_Fp8k" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/n3cBYk_Fp8k/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">The Only Enchanting Guide You Will Need</div>
+        <div class="vchannel">Enchanting</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=2zKYCFQlwww" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/2zKYCFQlwww/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">The Ultimate 1.20 Enchanting Guide</div>
+        <div class="vchannel">EyecraftMC</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=FK6h8DUgzwM" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/FK6h8DUgzwM/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Complete Enchanting Guide — Bedrock</div>
+        <div class="vchannel">Enchanting</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=_R2LC-X_7mA" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/_R2LC-X_7mA/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">How To Get Mending — Easy Tutorial</div>
+        <div class="vchannel">Mending</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=OWOyqePVCgY" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/OWOyqePVCgY/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">How to Get and Use Mending</div>
+        <div class="vchannel">Mending</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=zFQ7JPYfG6k" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/zFQ7JPYfG6k/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">How To Get Mending — Easily</div>
+        <div class="vchannel">Mending</div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="section-label">VIDEOS — FARMING &amp; TRADING</div>
+  <div class="video-grid">
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=a2zZRaRx_kI" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/a2zZRaRx_kI/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Villager Trading Hall — Unlimited Emeralds</div>
+        <div class="vchannel">Farming &amp; trading</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=4YvOkJ4mW3A" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/4YvOkJ4mW3A/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">The Ultimate Villager Trading Hall Guide</div>
+        <div class="vchannel">EyecraftMC</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=mcuMMp0yQnY" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/mcuMMp0yQnY/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">How To Start A Farm</div>
+        <div class="vchannel">Pixlriffs</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=AxdHi-ijIkY" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/AxdHi-ijIkY/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">7 Easy Automatic Farms for Survival</div>
+        <div class="vchannel">Farming</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=HrOeWEsTzag" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/HrOeWEsTzag/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Simple Fully Automatic Villager Crop Farm</div>
+        <div class="vchannel">Farming</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=NU04TtXdyj4" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/NU04TtXdyj4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Armorer's House &amp; Automatic Iron Farm</div>
+        <div class="vchannel">Farming</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=O6c_qSzL_us" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/O6c_qSzL_us/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Easy 2-in-1 Iron Farm &amp; Villager Breeder</div>
+        <div class="vchannel">Farming</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=JrQuD6xWHlA" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/JrQuD6xWHlA/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Easy IRON Farm Tutorial — 330+/hr</div>
+        <div class="vchannel">Farming</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=XZdK4dc28HU" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/XZdK4dc28HU/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Easy Villager Trading Hall Farm</div>
+        <div class="vchannel">Farming &amp; trading</div>
+      </div>
+    </a>
+
+    <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=vrnXwWQOTE4" target="_blank" rel="noopener">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/vrnXwWQOTE4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <div class="vinfo">
+        <div class="vtitle">Ultimate Villager Trading Hall Tutorial</div>
+        <div class="vchannel">Farming &amp; trading</div>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  <p class="note">This is an independent fan-made hub for quick access to official Minecraft links. Not affiliated with or endorsed by Mojang Studios or Microsoft.</p>
+  <p>Minecraft is a trademark of Mojang Studios.</p>
+  <p class="credit">By Atulya Raj Patel</p>
+</footer>
+
+</body>
+</html>
