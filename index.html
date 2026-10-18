@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0032)https://minehubsites.vercel.app/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Minehub-sites — Minecraft Fan Links, Guides &amp; Videos</title>
 <meta name="description" content="Minehub-sites is a fan-made collection of Minecraft links — official sites, redstone guides, building tutorials, enchanting tips, farming, and hand-picked YouTube videos, all in one place.">
@@ -21,8 +21,8 @@
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='5' fill='%235b9c3e'/%3E%3Crect width='16' height='1' fill='%2379c257'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%233f7229'/%3E%3Crect x='4' y='2' width='1' height='1' fill='%233f7229'/%3E%3Crect x='9' y='1' width='1' height='1' fill='%233f7229'/%3E%3Crect x='12' y='3' width='1' height='1' fill='%233f7229'/%3E%3Crect y='5' width='16' height='11' fill='%237a5230'/%3E%3Crect x='2' y='6' width='1' height='1' fill='%23573a22'/%3E%3Crect x='7' y='8' width='1' height='1' fill='%23573a22'/%3E%3Crect x='11' y='7' width='1' height='1' fill='%23573a22'/%3E%3Crect x='4' y='10' width='1' height='1' fill='%23573a22'/%3E%3Crect x='13' y='11' width='1' height='1' fill='%23573a22'/%3E%3Crect x='9' y='13' width='1' height='1' fill='%23573a22'/%3E%3Crect x='2' y='13' width='1' height='1' fill='%23573a22'/%3E%3C/svg%3E">
 
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link href="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/css2" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 
 
@@ -96,247 +96,16 @@ footer .credit{margin-top:10px;color:var(--gold)}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
 /* Minehub account UI — local, browser-only account system */
-#mh-account{position:absolute;top:18px;right:20px;z-index:20}
-#mh-login-btn,#mh-user-btn{border:2px solid #3d9d43;background:#111d14;color:#f5f7f2;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;box-shadow:4px 4px 0 #050805;transition:.15s}
-#mh-login-btn:hover,#mh-user-btn:hover{border-color:#65d65f;transform:translate(-1px,-1px)}
-#mh-user-menu{display:none;position:absolute;right:0;top:48px;width:210px;background:#111d14;border:2px solid #2b4530;border-radius:12px;padding:10px;box-shadow:8px 8px 0 #050805}
-#mh-user-menu.open{display:block}
-#mh-user-name{font-weight:900;color:#fff;padding:6px 8px 2px;word-break:break-word}
-#mh-user-email{font-size:11px;color:#aebcaf;padding:2px 8px 10px;word-break:break-word}
-#mh-signout{width:100%;border:0;border-radius:8px;padding:9px;background:#3d9d43;color:white;font-weight:800;cursor:pointer}
-#mh-auth-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.76);z-index:1000000;align-items:center;justify-content:center;padding:18px}
-#mh-auth-modal.open{display:flex}
-#mh-auth-box{width:min(440px,100%);background:linear-gradient(145deg,#17251a,#0d170f);border:2px solid #527b58;border-radius:16px;padding:24px;box-shadow:12px 12px 0 rgba(0,0,0,.6)}
-#mh-auth-box h2{font-family:"Press Start 2P",monospace;font-size:16px;color:#65d65f;line-height:1.5;margin-bottom:8px}
-#mh-auth-box p{color:#aebcaf;font-size:13px;line-height:1.5;margin-bottom:16px}
-#mh-auth-switch{display:flex;gap:6px;margin-bottom:12px}
-#mh-auth-switch button{flex:1;border:1px solid #2b4530;background:#0b140d;color:#aebcaf;border-radius:8px;padding:9px;font-weight:800;cursor:pointer}
-#mh-auth-switch button.active{background:#2b5d2e;color:#fff;border-color:#65d65f}
-#mh-auth-box input{width:100%;padding:12px;margin:6px 0;border:1px solid #2b4530;background:#07100a;color:#f5f7f2;border-radius:9px;outline:none}
-#mh-auth-box input:focus{border-color:#65d65f}
-#mh-auth-actions{display:flex;gap:8px;margin-top:10px}
-#mh-auth-actions button{flex:1;padding:11px;border:0;border-radius:9px;font-weight:800;cursor:pointer}
-#mh-auth-submit{background:#65d65f;color:#07100a}.mh-auth-secondary{background:#2b4530;color:#f5f7f2}
-#mh-auth-note{font-size:10px;color:#7f927f;line-height:1.45;margin-top:10px}
-#mh-auth-message{min-height:20px;margin-top:10px;font-size:12px;color:#e6b84a;line-height:1.45}
-#mh-ai-login-note{display:none;margin:10px 0 0;padding:9px 11px;background:#17251a;border:1px solid #2b4530;border-radius:9px;color:#aebcaf;font-size:12px}
-@media(max-width:650px){#mh-account{top:12px;right:12px}#mh-login-btn,#mh-user-btn{font-size:12px;padding:8px 10px}}
 </style>
 
-<script src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/saved_resource"></script>
-<style>
-.SignerDigitalExtPopupModal {
-	font-family: Calibri, sans-serif;
-	display: none;
-	height: 100%;
-	width: 100%;
-	justify-content: center;
-	display: flex;
-	left: 0;
-	top: 0;
-	position: fixed;
-	z-index: 9999;
-}
-
-.SignerDigitalExtClose {
-    position: absolute;
-    top: 30px;
-    right: 525px;
-    background: none;
-    border: none;
-    color: black;
-    font-size: 25px;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-}
-.SignerDigitalExtLicSitesClose {
-	background: none;
-	border: none;
-	color: black;
-	font-size: 25px;
-	cursor: pointer;
-	line-height:1;
-	transition: color 0.3s ease-in-out;
-}
-
-.SignerDigitalExtSelCertContainer {
-    font-family: Calibri, sans-serif;
-    background-color: #e6faf6;
-    top: 50px;
-	position: relative;
-	padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 30px auto;
-    width: 420px;
-    height: 420px;
-}
-
-.SignerDigitalExtSCPinContainer {
-    font-family: Calibri, sans-serif;
-    background-color: #e6faf6;
-    top: 50px;
-	position: relative;
-	padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 30px auto;
-    width: 360px;
-    height: 180px;
-}
-
-#SDCertListContainer {
-    margin-top: 10px;
-    max-height: 300px;
-    background-color: white;
-    overflow-y: auto;
-    padding: 0px;
-    border-radius: 5px;
-}
-
-
-.SignerDigitalExtImg {
-    text-align: start;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 40px;
-}
-
-.SignerDigitalExtSpan {
-    text-align: center;
-    font-size: 24px;
-    color: #333;
-}
-
-.SignerDigitalExtCertItem {
-    padding: 5px;
-    border-bottom: 1px solid;
-    margin-bottom: 2px;
-    cursor: pointer;
-}
-
-.SignerDigitalExtCertItem:hover {
-	background-color: #ccc;
-}
-
-.SignerDigitalExtCertItem.selected {
-	background-color: #ccc;
-	border-color: #007bff;
-}
-
-.expired {
-    color: red;
-    font-weight: bold;
-}
-
-.SignerDigitalExtButton {
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-}
-.SignerDigitalExtLicSitesImg {
-	padding-top: 10px;
-	display: flex;
-	justify-content: center;
-}
-
-.SignerDigitalExtLicSitesSpan {
-	font-size: 18px;
-	font-weight: bold;
-}
-
-.SignerDigitalExtLicSitesContainer {
-	font-family: Calibri, sans-serif;
-	background-color: #e6faf6;
-	border: 1px solid black;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	margin: 30px auto;
-	width: 550px;
-	height: 500px;
-}
-
-.SignerDigitalExtLicSitesHeader {
-	font-size: 16px;
-	display: flex;
-	justify-content: space-between;
-	background-color: white;
-	padding: 5px;
-	border-bottom: 1px solid #ddd;
-}
-
-.SignerDigitalExtLicSitesParagraph {
-	padding-left: 15px;
-	padding-top: 20px;
-	font-size: 14px;
-}
-
-.SignerDigitalExtLicSitesDiv {
-	display: flex;
-	justify-content:center;
-	padding: 10px;
-}
-
-.SignerDigitalExtLicSitesBtn {
-	width: 100px;
-	padding: 3px;
-	font-weight: 600;
-	font-size: 12px;
-	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-}
-
-
- .SignerDigitalExtLicSitesTable {
-     width: 100%;
-     background-color: white;
-     border-collapse: collapse;
- }
-
-	
- .SignerDigitalExtLicSitesTd {
-	 padding: 5px !important;
-     width: 140px;
-     border: 1px solid #ddd;
-     text-align: left;
-	 vertical-align:middle;
- }
- .SignerDigitalExtLicSitesTdd {
-     border: 1px solid #ddd;
-     text-align: center;
- }
-
- .SignerDigitalExtLicSitesTh {
-     border: 1px solid #ddd;
-     background-color: #f4f4f4;
-	 line-height:1;
-     width: 100px;
-     text-align: left;
-	 margin-top:5px;
-     padding: 5px;
- }
-.SignerDigitalExtLicSitesScroll {
-     max-height: 200px;
-     overflow-y: auto;
- }
- .SignerDigitalExtLicSitesDltbtn {
-     color: white;
-     background-color: #e42424;
-     border: 1px solid black;
-     cursor: pointer;
-     border-radius: 4px;
- }
- .SignerDigitalExtLicSitesDltbtn:hover {
-         background-color: darkred;
- }
-</style>
+<script src="https://js.puter.com/v2/"></script>
 </head>
-<body id="home">
+<body id='home'>
 <nav class="mh-nav" aria-label="Main navigation">
- <a href="https://minehubsites.vercel.app/#" class="mh-brand">MINEHUB<span>-SITES</span></a>
+ <a href="#" class="mh-brand">MINEHUB<span>-SITES</span></a>
  <div class="mh-navlinks">
-  <a href="https://minehubsites.vercel.app/#home">Home</a><a href="https://minehubsites.vercel.app/#official">Official</a><a href="https://minehubsites.vercel.app/#learn">Guides</a>
-  <a href="https://minehubsites.vercel.app/#videos">Videos</a><a href="https://minehubsites.vercel.app/#tools">Tools</a>
+  <a href="#home">Home</a><a href="#official">Official</a><a href="#learn">Guides</a>
+  <a href="#videos">Videos</a><a href="#tools">Tools</a>
  </div>
  <button class="mh-menu" type="button" aria-label="Open menu">☰</button>
  <button id="mhMusic" type="button" aria-label="Toggle music">🎵 Music</button>
@@ -355,35 +124,25 @@ footer .credit{margin-top:10px;color:var(--gold)}
 
 
 <header>
-<div id="mh-account">
-  <button id="mh-login-btn" type="button" style="display: none;">🔐 Login / Sign up</button>
-  <button id="mh-user-btn" type="button" style="display: inline-block;">👤 Account</button>
-  <div id="mh-user-menu">
-    <div id="mh-user-name">dsf</div>
-    <div id="mh-user-email">purushotam.msadahindra@gmail.com</div>
-    <button id="mh-signout" type="button">Log out</button>
-  </div>
-</div>
-
-  <svg class="logo" width="64" height="64" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<svg class="logo" width="64" height="64" viewBox="0 0 16 16" shape-rendering="crispEdges">
     <!-- grass top -->
-    <rect x="0" y="0" width="16" height="5" fill="#5b9c3e"></rect>
-    <rect x="0" y="0" width="16" height="1" fill="#79c257"></rect>
-    <rect x="1" y="1" width="1" height="1" fill="#3f7229"></rect>
-    <rect x="4" y="2" width="1" height="1" fill="#3f7229"></rect>
-    <rect x="9" y="1" width="1" height="1" fill="#3f7229"></rect>
-    <rect x="12" y="3" width="1" height="1" fill="#3f7229"></rect>
+    <rect x="0" y="0" width="16" height="5" fill="#5b9c3e"/>
+    <rect x="0" y="0" width="16" height="1" fill="#79c257"/>
+    <rect x="1" y="1" width="1" height="1" fill="#3f7229"/>
+    <rect x="4" y="2" width="1" height="1" fill="#3f7229"/>
+    <rect x="9" y="1" width="1" height="1" fill="#3f7229"/>
+    <rect x="12" y="3" width="1" height="1" fill="#3f7229"/>
     <!-- dirt sides -->
-    <rect x="0" y="5" width="16" height="11" fill="#7a5230"></rect>
-    <rect x="2" y="6" width="1" height="1" fill="#573a22"></rect>
-    <rect x="7" y="8" width="1" height="1" fill="#573a22"></rect>
-    <rect x="11" y="7" width="1" height="1" fill="#573a22"></rect>
-    <rect x="4" y="10" width="1" height="1" fill="#573a22"></rect>
-    <rect x="13" y="11" width="1" height="1" fill="#573a22"></rect>
-    <rect x="9" y="13" width="1" height="1" fill="#573a22"></rect>
-    <rect x="2" y="13" width="1" height="1" fill="#573a22"></rect>
+    <rect x="0" y="5" width="16" height="11" fill="#7a5230"/>
+    <rect x="2" y="6" width="1" height="1" fill="#573a22"/>
+    <rect x="7" y="8" width="1" height="1" fill="#573a22"/>
+    <rect x="11" y="7" width="1" height="1" fill="#573a22"/>
+    <rect x="4" y="10" width="1" height="1" fill="#573a22"/>
+    <rect x="13" y="11" width="1" height="1" fill="#573a22"/>
+    <rect x="9" y="13" width="1" height="1" fill="#573a22"/>
+    <rect x="2" y="13" width="1" height="1" fill="#573a22"/>
     <!-- outline -->
-    <rect x="0" y="0" width="16" height="16" fill="none" stroke="#000" stroke-width="0.6"></rect>
+    <rect x="0" y="0" width="16" height="16" fill="none" stroke="#000" stroke-width="0.6"/>
   </svg>
   <div class="eyebrow">YOUR MINECRAFT HUB</div>
   <h1>MINEHUB-SITES</h1>
@@ -420,33 +179,12 @@ footer .credit{margin-top:10px;color:var(--gold)}
 <section id="mh-ai-launch" aria-label="BlockHub AI">
   <div id="mh-ai-card" role="button" tabindex="0">
     <h2>🤖 BLOCKHUB</h2>
-    <p>Your general-purpose AI assistant — ask questions without an account or sign-up.</p>
-    <div id="mh-ai-status">● BlockHub • Anonymous public AI</div>
+    <p>Your general-purpose AI assistant — click to sign in or sign up with Puter and start chatting.</p>
+    <div id="mh-ai-status">● BlockHub • Online AI • Fast fallback included</div>
   </div>
 </section>
 
-<div id="mh-auth-modal" aria-hidden="true" class="">
-  <div id="mh-auth-box">
-    <h2>⛏ MINEHUB ACCOUNT</h2>
-    <p id="mh-auth-subtitle">Create a Minehub account for your site profile (optional for BlockHub AI).</p>
-    <div id="mh-auth-switch">
-      <button id="mh-auth-tab-login" class="" type="button">Login</button>
-      <button id="mh-auth-tab-signup" type="button" class="active">Sign up</button>
-    </div>
-    <input id="mh-auth-username" type="text" placeholder="Minecraft-style username" autocomplete="nickname" maxlength="24" style="display: block;">
-    <input id="mh-auth-email" type="email" placeholder="Email" autocomplete="email">
-    <input id="mh-auth-password" type="password" placeholder="Password (6+ characters)" autocomplete="new-password">
-    <input id="mh-auth-confirm" type="password" placeholder="Confirm password" autocomplete="new-password" style="display: block;">
-    <div id="mh-auth-actions">
-      <button id="mh-auth-submit" type="button">Create account</button>
-      <button id="mh-auth-close" class="mh-auth-secondary" type="button">Cancel</button>
-    </div>
-    <div id="mh-auth-message"></div>
-    <div id="mh-auth-note">This version is self-contained and works on browser files and Vercel, but accounts are stored only in this browser/device. It is not a cloud account system.</div>
-  </div>
-</div>
-
-<div id="mh-ai-modal" aria-hidden="true" class="">
+<div id="mh-ai-modal" aria-hidden="true">
   <div id="mh-ai-box">
     <div id="mh-ai-head">
       <span>🤖 BLOCKHUB</span>
@@ -454,8 +192,8 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </div>
     <div id="mh-ai-messages">
       <div class="mh-ai-msg mh-ai-bot">Hi! I'm BlockHub. Ask me about Minecraft or anything else — maths, science, coding, school, writing, gaming, general knowledge, and more.</div>
-    <div class="mh-ai-msg mh-ai-user">hry</div><div class="mh-ai-msg mh-ai-bot">I could not connect to the online AI just now. Please try again in a moment.</div></div>
-    <div id="mh-ai-hint">BlockHub uses an anonymous public AI service with no AI account or API key. Public workers may be busy; a small built-in fallback keeps the chat responsive.</div>
+    </div>
+    <div id="mh-ai-hint">BlockHub uses Puter for its online AI connection. If it is temporarily unavailable, a small built-in fallback keeps the chat responsive.</div>
     <div id="mh-ai-controls">
       <input id="mh-ai-input" placeholder="Ask BlockHub anything…" autocomplete="off">
       <button id="mh-ai-send" type="button">Send</button>
@@ -463,107 +201,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
   </div>
 </div>
 
-<script>
-(function(){
-  const $=id=>document.getElementById(id);
-  const authModal=$('mh-auth-modal'), loginBtn=$('mh-login-btn'), userBtn=$('mh-user-btn'), userMenu=$('mh-user-menu');
-  const username=$('mh-auth-username'), email=$('mh-auth-email'), password=$('mh-auth-password'), confirm=$('mh-auth-confirm');
-  const submit=$('mh-auth-submit'), msg=$('mh-auth-message'), subtitle=$('mh-auth-subtitle');
-  const tabLogin=$('mh-auth-tab-login'), tabSignup=$('mh-auth-tab-signup');
-  const DB_KEY='minehub_local_accounts_v2', SESSION_KEY='minehub_local_session_v2';
-  let mode='login';
 
-  function loadDB(){ try{return JSON.parse(localStorage.getItem(DB_KEY)||'{}');}catch{return {};} }
-  function saveDB(db){ localStorage.setItem(DB_KEY,JSON.stringify(db)); }
-  function simpleHash(value){
-    let h=2166136261;
-    for(let i=0;i<value.length;i++){h^=value.charCodeAt(i);h=Math.imul(h,16777619);}
-    return (h>>>0).toString(16);
-  }
-  async function hash(value){
-    try{
-      if(window.crypto?.subtle){
-        const data=new TextEncoder().encode(value);
-        const buf=await crypto.subtle.digest('SHA-256',data);
-        return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('');
-      }
-    }catch{}
-    return simpleHash(value);
-  }
-  function showMessage(text){msg.textContent=text;}
-  function setMode(next){
-    mode=next;
-    const signup=mode==='signup';
-    tabLogin.classList.toggle('active',!signup); tabSignup.classList.toggle('active',signup);
-    username.style.display=signup?'block':'none'; confirm.style.display=signup?'block':'none';
-    submit.textContent=signup?'Create account':'Login';
-    subtitle.textContent=signup?'Create a Minehub account for your site profile (optional for BlockHub AI).':'Log in to your Minehub account to use BlockHub AI.';
-    password.autocomplete=signup?'new-password':'current-password';
-    showMessage('');
-  }
-  function openAuth(nextMode='login'){
-    setMode(nextMode); authModal.classList.add('open'); authModal.setAttribute('aria-hidden','false');
-    setTimeout(()=> (nextMode==='signup'?username:email).focus(),50);
-  }
-  function closeAuth(){authModal.classList.remove('open');authModal.setAttribute('aria-hidden','true');showMessage('');}
-  function getSession(){
-    try{const raw=localStorage.getItem(SESSION_KEY);return raw?JSON.parse(raw):null;}catch{return null;}
-  }
-  function setUser(user){
-    const logged=!!user; loginBtn.style.display=logged?'none':'inline-block'; userBtn.style.display=logged?'inline-block':'none';
-    if(logged){ $('mh-user-name').textContent=user.username||'Minehub Player'; $('mh-user-email').textContent=user.email||''; }
-  }
-  function currentUser(){
-    const s=getSession(); if(!s?.email)return null;
-    const db=loadDB(); const account=db[s.email];
-    return account ? {email:s.email,username:account.username||'Minehub Player'} : null;
-  }
-  async function handleSubmit(){
-    const e=email.value.trim().toLowerCase(), p=password.value;
-    if(!e || !p){showMessage('Enter your email and password.');return;}
-    if(mode==='signup'){
-      const u=username.value.trim();
-      if(u.length<3){showMessage('Username must be at least 3 characters.');return;}
-      if(!/^[a-zA-Z0-9_ -]+$/.test(u)){showMessage('Use only letters, numbers, spaces, or _.');return;}
-      if(p.length<6){showMessage('Password must be at least 6 characters.');return;}
-      if(p!==confirm.value){showMessage('Passwords do not match.');return;}
-      const db=loadDB();
-      if(db[e]){showMessage('An account with this email already exists. Try Login.');return;}
-      const usernameTaken=Object.values(db).some(a=>(a.username||'').toLowerCase()===u.toLowerCase());
-      if(usernameTaken){showMessage('That Minehub username is already taken.');return;}
-      showMessage('Creating your Minehub account…');
-      db[e]={username:u,passwordHash:await hash(p),createdAt:new Date().toISOString()};
-      saveDB(db);
-      localStorage.setItem(SESSION_KEY,JSON.stringify({email:e}));
-      setUser({email:e,username:u}); closeAuth();
-      return;
-    }
-    const db=loadDB(), account=db[e];
-    if(!account){showMessage('No Minehub account was found for that email. Use Sign up first.');return;}
-    showMessage('Logging in…');
-    if(account.passwordHash!==await hash(p)){showMessage('Incorrect email or password.');return;}
-    localStorage.setItem(SESSION_KEY,JSON.stringify({email:e}));
-    setUser({email:e,username:account.username}); closeAuth();
-  }
-  async function logout(){localStorage.removeItem(SESSION_KEY); userMenu.classList.remove('open'); setUser(null);}
-
-  tabLogin.onclick=()=>setMode('login'); tabSignup.onclick=()=>setMode('signup');
-  loginBtn.onclick=()=>openAuth('login'); userBtn.onclick=()=>userMenu.classList.toggle('open');
-  $('mh-auth-close').onclick=closeAuth; submit.onclick=handleSubmit; $('mh-signout').onclick=logout;
-  authModal.addEventListener('click',e=>{if(e.target===authModal)closeAuth();});
-  document.addEventListener('click',e=>{if(!e.target.closest('#mh-account'))userMenu.classList.remove('open');});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAuth(); if(e.key==='Enter' && authModal.classList.contains('open')) handleSubmit();});
-
-  window.MinehubAuth={
-    configured:true,
-    getUser:async()=>currentUser(),
-    openLogin:()=>openAuth('login'),
-    openSignup:()=>openAuth('signup'),
-    logout
-  };
-  setUser(currentUser());
-})();
-</script>
 
 <script>
 (function(){
@@ -573,7 +211,20 @@ footer .credit{margin-top:10px;color:var(--gold)}
   let history=[];
   let busy=false;
 
-  function open(){
+  async function open(){
+    // Must call signIn() straight from the click so the popup isn't blocked.
+    try{
+      if(!window.puter || !puter.auth){ status.textContent='● BlockHub • Puter failed to load — refresh the page'; return; }
+      if(!puter.auth.isSignedIn()){
+        status.textContent='● BlockHub • Waiting for Puter login…';
+        await puter.auth.signIn();
+      }
+      if(!puter.auth.isSignedIn()) return;
+    }catch(e){
+      status.textContent='● BlockHub • Puter login was cancelled';
+      return;
+    }
+    status.textContent='● BlockHub • Online AI • Ready';
     modal.classList.add('open');
     modal.setAttribute('aria-hidden','false');
     setTimeout(()=>input.focus(),50);
@@ -608,33 +259,32 @@ footer .credit{margin-top:10px;color:var(--gold)}
     return 'I could not connect to the online AI just now. Please try again in a moment.';
   }
 
-  // Anonymous public AI through AI Horde. No account or API key is needed.
-  // Public workers can be busy, so we wait for a result with a bounded timeout.
   async function onlineAnswer(q){
-    const recent=history.slice(-8).map(m => (m.role==='user'?'User: ':'BlockHub: ')+m.content).join('\n');
-    const prompt = 'You are BlockHub, a helpful general assistant inside Minehub-sites. Answer Minecraft, school, coding, science, maths, writing, gaming and general knowledge questions accurately. Explain schoolwork step by step. Be concise and friendly.\n'+recent+'\nUser: '+q+'\nBlockHub:';
-    const headers={'Content-Type':'application/json','apikey':'0000000000','Client-Agent':'Minehub-sites:BlockHub:1.0.0 (anonymous web client)'};
-    const submit=await fetch('https://aihorde.net/api/v2/generate/text/async',{
-      method:'POST',headers,
-      body:JSON.stringify({prompt,params:{max_length:320,temperature:0.7,rep_pen:1.08},nsfw:false,models:[]})
-    });
-    if(!submit.ok) throw new Error('AI Horde request failed ('+submit.status+').');
-    const job=await submit.json();
-    if(!job.id) throw new Error('AI service did not return a job ID.');
-    const started=Date.now();
-    while(Date.now()-started<90000){
-      await new Promise(resolve=>setTimeout(resolve,2500));
-      const result=await fetch('https://aihorde.net/api/v2/generate/text/status/'+encodeURIComponent(job.id),{headers:{'Client-Agent':'Minehub-sites:BlockHub:1.0.0 (anonymous web client)'}});
-      if(!result.ok) throw new Error('AI status check failed ('+result.status+').');
-      const state=await result.json();
-      if(state.faulted) throw new Error('No public AI worker could complete this request.');
-      if(state.done){
-        const answer=String(state?.generations?.[0]?.text||'').trim();
-        if(!answer) throw new Error('The AI returned an empty response.');
-        return answer.slice(0,12000);
-      }
+    if(!window.puter || !puter.ai || typeof puter.ai.chat!=='function'){
+      throw new Error('Puter.js did not load');
     }
-    throw new Error('The public AI queue is busy. Please try again.');
+    const recent=history.slice(-10);
+    const aiMessages=[
+      {role:'system',content:
+        'You are BlockHub, a helpful general-purpose AI assistant inside Minehub-sites. '+
+        'Answer Minecraft, school, coding, science, maths, writing, gaming, general knowledge and everyday questions. '+
+        'Be accurate, friendly and concise. For school questions, explain step by step. '+
+        'Do not claim to have performed actions you cannot perform.'},
+      ...recent,
+      {role:'user',content:q}
+    ];
+    const timeout=new Promise((_,reject)=>setTimeout(()=>reject(new Error('AI timeout')),25000));
+    const result=await Promise.race([
+      puter.ai.chat(aiMessages),
+      timeout
+    ]);
+    let text='';
+    if(typeof result==='string') text=result;
+    else if(result?.message?.content) text=typeof result.message.content==='string' ? result.message.content : result.message.content.map(x=>x.text||'').join('');
+    else if(result?.text) text=result.text;
+    text=String(text||'').trim();
+    if(!text) throw new Error('Empty AI response');
+    return text.slice(0,12000);
   }
 
   async function send(){
@@ -647,17 +297,19 @@ footer .credit{margin-top:10px;color:var(--gold)}
 
     busy=true;
     sendBtn.disabled=true;
-    status.textContent='● BlockHub • Connecting to anonymous AI…';
-    const thinking=add('Connecting to Online AI…','bot','mh-ai-thinking');
+    status.textContent='● BlockHub • Online AI • Thinking…';
+    const thinking=add('Thinking…','bot','mh-ai-thinking');
 
     try{
       let answerText;
       try{
         answerText=await onlineAnswer(q);
-        status.textContent='● BlockHub • Anonymous AI';
+        status.textContent='● BlockHub • Online AI answer';
       }catch(e){
-        console.warn('BlockHub anonymous AI error:',e);
-        answerText=fallback(q);
+        console.error('BlockHub AI error:',e);
+        let why=(e&&(e.message||(e.error&&e.error.message)||e.error))||'';
+        if(typeof why!=='string') why=JSON.stringify(why);
+        answerText=fallback(q)+(why?'\n\n(Details: '+why.slice(0,200)+')':'');
         status.textContent='● BlockHub • Offline fallback';
       }
 
@@ -668,7 +320,6 @@ footer .credit{margin-top:10px;color:var(--gold)}
       thinking.remove();
       add('Sorry, something went wrong. Please try your question again.','bot');
       status.textContent='● BlockHub • Ready';
-      console.error('BlockHub chat error:',e);
     }finally{
       busy=false;
       sendBtn.disabled=false;
@@ -686,8 +337,6 @@ footer .credit{margin-top:10px;color:var(--gold)}
   input.addEventListener('keydown',e=>{if(e.key==='Enter')send();});
   modal.addEventListener('click',e=>{if(e.target===modal)close();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
-
-
 })();
 </script>
 
@@ -695,7 +344,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
 
   <div id="official" class="section-label">OFFICIAL SITES</div>
   <div class="grid">
-    <a class="card pixel-border" href="https://www.minecraft.net/" target="_blank" rel="noopener">
+    <a class="card pixel-border" href="https://www.minecraft.net" target="_blank" rel="noopener">
       <div class="icon" style="--icon-color: var(--accent-1);"></div>
       <div class="name">Minecraft.net</div>
       <div class="desc">The official home base — news, store, and account settings.</div>
@@ -705,12 +354,12 @@ footer .credit{margin-top:10px;color:var(--gold)}
       <div class="name">Downloads</div>
       <div class="desc">Get Java Edition, Bedrock Edition, or the launcher.</div>
     </a>
-    <a class="card pixel-border" href="https://education.minecraft.net/" target="_blank" rel="noopener">
+    <a class="card pixel-border" href="https://education.minecraft.net" target="_blank" rel="noopener">
       <div class="icon" style="--icon-color: var(--accent-3);"></div>
       <div class="name">Minecraft Education</div>
       <div class="desc">Classroom-friendly worlds and lesson resources.</div>
     </a>
-    <a class="card pixel-border" href="https://www.mojang.com/" target="_blank" rel="noopener">
+    <a class="card pixel-border" href="https://www.mojang.com" target="_blank" rel="noopener">
       <div class="icon" style="--icon-color: var(--accent-4);"></div>
       <div class="name">Mojang Studios</div>
       <div class="desc">The developer behind the game — studio news and jobs.</div>
@@ -734,7 +383,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
 
   <div id="learn" class="section-label">LEARN &amp; EXPLORE</div>
   <div class="grid">
-    <a class="card pixel-border" href="https://minecraft.wiki/" target="_blank" rel="noopener">
+    <a class="card pixel-border" href="https://minecraft.wiki" target="_blank" rel="noopener">
       <div class="icon" style="--icon-color: var(--accent-5);"></div>
       <div class="name">Minecraft Wiki</div>
       <div class="desc">Every block, mob, item, and mechanic, documented.</div>
@@ -744,7 +393,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
       <div class="name">Marketplace</div>
       <div class="desc">Official maps, skins, and add-ons from creators.</div>
     </a>
-    <a class="card pixel-border" href="https://feedback.minecraft.net/" target="_blank" rel="noopener">
+    <a class="card pixel-border" href="https://feedback.minecraft.net" target="_blank" rel="noopener">
       <div class="icon" style="--icon-color: var(--accent-1);"></div>
       <div class="name">Feedback Site</div>
       <div class="desc">Vote on and suggest ideas for future updates.</div>
@@ -753,7 +402,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
 
   <div class="section-label">HELP &amp; SUPPORT</div>
   <div class="grid">
-    <a class="card pixel-border" href="https://help.minecraft.net/" target="_blank" rel="noopener">
+    <a class="card pixel-border" href="https://help.minecraft.net" target="_blank" rel="noopener">
       <div class="icon" style="--icon-color: var(--accent-2);"></div>
       <div class="name">Minecraft Help</div>
       <div class="desc">Account issues, purchases, and troubleshooting.</div>
@@ -825,10 +474,10 @@ footer .credit{margin-top:10px;color:var(--gold)}
       <div class="name">Redstone Circuits</div>
       <div class="desc">Logic gates, clocks, and other building-block circuits.</div>
     </a>
-    <a class="card pixel-border" href="https://minecraft.wiki/w/Tutorials/Redstone_compublic AIs" target="_blank" rel="noopener">
+    <a class="card pixel-border" href="https://minecraft.wiki/w/Tutorials/Redstone_computers" target="_blank" rel="noopener">
       <div class="icon" style="--icon-color: var(--accent-2);"></div>
-      <div class="name">Redstone Compublic AIs</div>
-      <div class="desc">How players build calculators and compublic AIs from redstone.</div>
+      <div class="name">Redstone Computers</div>
+      <div class="desc">How players build calculators and computers from redstone.</div>
     </a>
     <a class="card pixel-border" href="https://www.reddit.com/r/redstone/" target="_blank" rel="noopener">
       <div class="icon" style="--icon-color: var(--accent-3);"></div>
@@ -889,7 +538,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
   <div class="video-grid">
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=ADU1ycprBg4" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/ADU1ycprBg4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Day 1 in Minecraft — How to Play, Tutorial #1</div>
         <div class="vchannel">Beginner basics</div>
@@ -897,7 +546,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=LknJd9rd3NU" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(1).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/LknJd9rd3NU/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">The Complete Minecraft Beginners Guide</div>
         <div class="vchannel">Beginner basics</div>
@@ -905,7 +554,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=bsqmUfNPygY" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(2).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/bsqmUfNPygY/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Surviving Your First Night — Survival Guide</div>
         <div class="vchannel">Pixlriffs</div>
@@ -913,7 +562,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=BEH_fMgRNrc" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(3).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/BEH_fMgRNrc/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Beginners Guide — Tools, Weapons, Food</div>
         <div class="vchannel">Beginner basics</div>
@@ -921,7 +570,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=OozklZXFbDQ" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(4).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/OozklZXFbDQ/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Start Your Survival Properly</div>
         <div class="vchannel">Beginner basics</div>
@@ -929,7 +578,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=sa8olXpN4Wc" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(5).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/sa8olXpN4Wc/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">10 Minecraft Survival Tips for Beginners</div>
         <div class="vchannel">Beginner basics</div>
@@ -937,7 +586,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=LFED4kLqIlw" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(6).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/LFED4kLqIlw/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">First Days Guide — Survive Day 1</div>
         <div class="vchannel">Beginner basics</div>
@@ -945,7 +594,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=bUudx1cPiAA" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(7).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/bUudx1cPiAA/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Surviving Your First Night — Survival Guide (S1)</div>
         <div class="vchannel">Pixlriffs</div>
@@ -953,7 +602,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=1KKzAwUvIGk" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(8).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/1KKzAwUvIGk/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">How To Play Minecraft — Beginner's Guide</div>
         <div class="vchannel">Beginner basics</div>
@@ -961,7 +610,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=FdV22yBSECw" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(9).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/FdV22yBSECw/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">25 Tips &amp; Tricks Everyone Should Know</div>
         <div class="vchannel">Beginner basics</div>
@@ -974,7 +623,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
   <div class="video-grid">
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=Duedce11Jaw" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(10).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/Duedce11Jaw/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Simple Redstone Tutorial</div>
         <div class="vchannel">Redstone basics</div>
@@ -982,7 +631,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=4pRTEDOXJx0" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(11).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/4pRTEDOXJx0/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Let's Learn Redstone 01</div>
         <div class="vchannel">Redstone basics</div>
@@ -990,7 +639,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=B2esricKcE8" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(12).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/B2esricKcE8/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Redstone Builds Everyone Should Know</div>
         <div class="vchannel">Mumbo Jumbo</div>
@@ -998,7 +647,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=Sx4flQYPh2Q" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(13).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/Sx4flQYPh2Q/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Hidden Piston Door</div>
         <div class="vchannel">Redstone doors</div>
@@ -1006,7 +655,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=pRL0i7kr_yQ" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(14).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/pRL0i7kr_yQ/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Easy Hidden 3x3 Piston Door</div>
         <div class="vchannel">Redstone doors</div>
@@ -1014,7 +663,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=F8JSDICp8gI" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(15).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/F8JSDICp8gI/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Secret Piston Door</div>
         <div class="vchannel">Redstone doors</div>
@@ -1022,7 +671,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=Go6adMWacpU" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(16).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/Go6adMWacpU/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Easiest Piston Door — Hidden 2x2</div>
         <div class="vchannel">Redstone doors</div>
@@ -1030,7 +679,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=ClZlZYJe8HM" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(17).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/ClZlZYJe8HM/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Simple Redstone Flying Machine</div>
         <div class="vchannel">Flying machines</div>
@@ -1038,7 +687,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=c8eDcD9U9g4" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(18).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/c8eDcD9U9g4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Complete Guide to Flying Machines</div>
         <div class="vchannel">Flying machines</div>
@@ -1046,7 +695,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=1CX1D1iKzoE" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(19).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/1CX1D1iKzoE/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Crop Harvesting Flying Machine</div>
         <div class="vchannel">Flying machines</div>
@@ -1059,7 +708,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
   <div class="video-grid">
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=gL_4xJ6TO7g" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(20).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/gL_4xJ6TO7g/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Ultimate Survival House Tutorial</div>
         <div class="vchannel">Building</div>
@@ -1067,7 +716,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=H8PnRxZbZqs" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(21).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/H8PnRxZbZqs/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">How To Build A Big House</div>
         <div class="vchannel">Building</div>
@@ -1075,7 +724,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=N2D9TbHDeCY" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(22).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/N2D9TbHDeCY/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">How to Build a Modern House (Easy)</div>
         <div class="vchannel">Building</div>
@@ -1083,7 +732,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=pHgzlegNO1Q" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(23).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/pHgzlegNO1Q/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Easy Medieval Survival House</div>
         <div class="vchannel">Building</div>
@@ -1091,7 +740,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=A0npivBfAGE" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(24).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/A0npivBfAGE/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Small Medieval House Tutorial</div>
         <div class="vchannel">Building</div>
@@ -1099,7 +748,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=1XXpmsOBWpE" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(25).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/1XXpmsOBWpE/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Medieval House Tutorial (Easy)</div>
         <div class="vchannel">Building</div>
@@ -1107,7 +756,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=DRUDua7iLMc" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(26).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/DRUDua7iLMc/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Ultimate Medieval Survival House</div>
         <div class="vchannel">Building</div>
@@ -1115,7 +764,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=sdJ5rSuGtPM" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(27).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/sdJ5rSuGtPM/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Cozy Medieval Starter House</div>
         <div class="vchannel">Building</div>
@@ -1123,7 +772,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=TW8DQxlKrqA" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(28).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/TW8DQxlKrqA/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Simple Survival House</div>
         <div class="vchannel">Building</div>
@@ -1131,7 +780,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=zGfYhB95XY4" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(29).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/zGfYhB95XY4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Starter Medieval House</div>
         <div class="vchannel">Building</div>
@@ -1144,7 +793,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
   <div class="video-grid">
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=I_MJ_rpL1e8" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(30).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/I_MJ_rpL1e8/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Enchanting Guide — Best Enchantments</div>
         <div class="vchannel">Enchanting</div>
@@ -1152,7 +801,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=7wAJhE0zfkQ" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(31).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/7wAJhE0zfkQ/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Ultimate Enchanting Guide</div>
         <div class="vchannel">Enchanting</div>
@@ -1160,7 +809,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=BfkoMaJRtw4" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(32).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/BfkoMaJRtw4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">How to Enchant in Minecraft</div>
         <div class="vchannel">Enchanting</div>
@@ -1168,7 +817,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=3-yU3gGRQ8Y" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(33).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/3-yU3gGRQ8Y/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Enchantment Guide — Hardcore Room</div>
         <div class="vchannel">Enchanting</div>
@@ -1176,7 +825,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=n3cBYk_Fp8k" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(34).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/n3cBYk_Fp8k/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">The Only Enchanting Guide You Will Need</div>
         <div class="vchannel">Enchanting</div>
@@ -1184,7 +833,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=2zKYCFQlwww" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(35).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/2zKYCFQlwww/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">The Ultimate 1.20 Enchanting Guide</div>
         <div class="vchannel">EyecraftMC</div>
@@ -1192,7 +841,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=FK6h8DUgzwM" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(36).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/FK6h8DUgzwM/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Complete Enchanting Guide — Bedrock</div>
         <div class="vchannel">Enchanting</div>
@@ -1200,7 +849,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=_R2LC-X_7mA" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(37).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/_R2LC-X_7mA/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">How To Get Mending — Easy Tutorial</div>
         <div class="vchannel">Mending</div>
@@ -1208,7 +857,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=OWOyqePVCgY" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(38).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/OWOyqePVCgY/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">How to Get and Use Mending</div>
         <div class="vchannel">Mending</div>
@@ -1216,7 +865,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=zFQ7JPYfG6k" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(39).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/zFQ7JPYfG6k/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">How To Get Mending — Easily</div>
         <div class="vchannel">Mending</div>
@@ -1229,7 +878,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
   <div class="video-grid">
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=a2zZRaRx_kI" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(40).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/a2zZRaRx_kI/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Villager Trading Hall — Unlimited Emeralds</div>
         <div class="vchannel">Farming &amp; trading</div>
@@ -1237,7 +886,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=4YvOkJ4mW3A" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(41).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/4YvOkJ4mW3A/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">The Ultimate Villager Trading Hall Guide</div>
         <div class="vchannel">EyecraftMC</div>
@@ -1245,7 +894,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=mcuMMp0yQnY" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(42).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/mcuMMp0yQnY/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">How To Start A Farm</div>
         <div class="vchannel">Pixlriffs</div>
@@ -1253,7 +902,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=AxdHi-ijIkY" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(43).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/AxdHi-ijIkY/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">7 Easy Automatic Farms for Survival</div>
         <div class="vchannel">Farming</div>
@@ -1261,7 +910,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=HrOeWEsTzag" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(44).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/HrOeWEsTzag/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Simple Fully Automatic Villager Crop Farm</div>
         <div class="vchannel">Farming</div>
@@ -1269,7 +918,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=NU04TtXdyj4" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(45).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/NU04TtXdyj4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Armorer's House &amp; Automatic Iron Farm</div>
         <div class="vchannel">Farming</div>
@@ -1277,7 +926,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=O6c_qSzL_us" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(46).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/O6c_qSzL_us/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Easy 2-in-1 Iron Farm &amp; Villager Breeder</div>
         <div class="vchannel">Farming</div>
@@ -1285,7 +934,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=JrQuD6xWHlA" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(47).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/JrQuD6xWHlA/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Easy IRON Farm Tutorial — 330+/hr</div>
         <div class="vchannel">Farming</div>
@@ -1293,7 +942,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=XZdK4dc28HU" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(48).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/XZdK4dc28HU/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Easy Villager Trading Hall Farm</div>
         <div class="vchannel">Farming &amp; trading</div>
@@ -1301,7 +950,7 @@ footer .credit{margin-top:10px;color:var(--gold)}
     </a>
 
     <a class="video-card pixel-border" href="https://www.youtube.com/watch?v=vrnXwWQOTE4" target="_blank" rel="noopener">
-      <img class="thumb" loading="lazy" src="./Minehub-sites — Minecraft Fan Links, Guides &amp; Videos_files/hqdefault(49).jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
+      <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/vrnXwWQOTE4/hqdefault.jpg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.borderTop='2px solid var(--basalt)';">
       <div class="vinfo">
         <div class="vtitle">Ultimate Villager Trading Hall Tutorial</div>
         <div class="vchannel">Farming &amp; trading</div>
@@ -1638,89 +1287,5 @@ document.addEventListener("DOMContentLoaded",()=>{
   $('stackBtn').onclick=()=>{let n=Math.max(0,Math.floor(Number($('itemCount').value)||0)),s=Number($('stackSize').value),full=Math.floor(n/s),left=n%s;$('stackResult').textContent=`${n} items = ${full} stack${full===1?'':'s'}${left?` + ${left} item${left===1?'':'s'}`:'.'}`;};
 })();
 </script>
-
-
-</body><div id="SelCertPopupModal" class="SignerDigitalExtPopupModal" style="display:none;">
-    <div class="SignerDigitalExtSelCertContainer">
-        <button id="SelCertCloseBtn" class="SignerDigitalExtClose">x</button>
-		<div class="SignerDigitalExtImg">
-			<img id="SDIconSelCert" alt="Globe icon" height="32" width="32" src="chrome-extension://glghokcicpikglmflbbelbgeafpijkkf/icon32.png">&nbsp;&nbsp;&nbsp;
-			<span class="SignerDigitalExtSpan" style="text-align:center;">Select Certificate</span>
-		</div>		
-		<div style="height: 310px; width: 100%; border-bottom: 1px solid black;background-color:white;">
-			<div style="max-height: 310px; overflow-y: auto;">
-				<div id="SDCertListContainer"></div>
-			</div>
-		</div>
-		<div class="SignerDigitalExtButton">
-			<button id="SelCertOkBtn" style="width: 80px">OK</button>
-			<button id="SelCertCancelBtn" style="margin-left:15px; width: 80px;">Cancel</button>
-		</div>
-	</div>
-</div>
-<div id="SdExtSCPinPopupModal" class="SignerDigitalExtPopupModal" style="display:none;">
-    <div class="SignerDigitalExtSCPinContainer">
-		<form>
-			<div class="SignerDigitalExtImg" style="border-bottom: 1px solid black;">
-				<img id="SDIconSCPin" alt="Globe icon" height="32" width="32" src="chrome-extension://glghokcicpikglmflbbelbgeafpijkkf/icon32.png">&nbsp;&nbsp;&nbsp;
-				<span class="SignerDigitalExtSpan" style="text-align:center;">Smartcard / Token User Pin</span>
-			</div>
-			<div style="text-align:center; padding-top:25px; padding-bottom:25px; font-size:14px;">User PIN:&nbsp;&nbsp;&nbsp;<input id="SdExtUserPin" type="password">
-			</div>
-			<div class="SignerDigitalExtButton" style="border-top: 1px solid black;">
-				<button id="SdScPinOkBtn" type="button" style="width: 80px">OK</button>
-				<button id="SdSCPinCancelBtn" type="button" style="margin-left:15px; width: 80px;">Cancel</button>
-			</div>
-		</form>
-	</div>
-</div>
-<div id="LicSitesPopupModal" class="SignerDigitalExtPopupModal" style="display:none;">
-	<div class="SignerDigitalExtLicSitesContainer">
-		<div class="SignerDigitalExtLicSitesHeader">
-			<span style="margin:10px;">Signer.Digital</span>
-			<button id="LicSitesCloseBtn" class="SignerDigitalExtLicSitesClose">x</button>
-		</div>
-		<div class="SignerDigitalExtLicSitesImg">
-			<img id="SDIconLicSite" alt="Globe icon" height="32" width="32" src="chrome-extension://glghokcicpikglmflbbelbgeafpijkkf/icon32.png">&nbsp;&nbsp;
-			<span class="SignerDigitalExtLicSitesSpan">Signer.Digital - Confirm Key Listing / Usage</span>
-		</div>
-		<div style="display:none;"><img id="trash_icon_src" src="chrome-extension://glghokcicpikglmflbbelbgeafpijkkf/icon_trash.svg"></div>
-		<div class="SignerDigitalExtLicSitesParagraph">
-			<span id="currentDomainLink" style="font-size:18px;font-weight:600;">Current Domain</span><br>
-			is trying to detect smartcards connected, or read certificate or use key for signing/encryption. Please
-			select your option.
-		</div>
-		<div class="SignerDigitalExtLicSitesDiv">
-			<button id="denyBtn" class="SignerDigitalExtLicSitesBtn">Deny</button>
-			<button id="alwaysallowBtn" class="SignerDigitalExtLicSitesBtn" style="margin-left:30px;" title="Allow access to Check Vendor License for Site.">Always Allow</button>
-		</div>
-		<div style="padding: 10px; text-align: center; ">
-			<strong style="font-size:18px;">Licensed Sites</strong><br><br>
-			<div style="height: 200px; width: 100%; border: 1px solid black;">
-				<div class="SignerDigitalExtLicSitesScroll">
-					<table class="SignerDigitalExtLicSitesTable">
-						<thead>
-							<tr>
-								<th class="SignerDigitalExtLicSitesTh">Website</th>
-								<th class="SignerDigitalExtLicSitesTh">License Status</th>
-								<th class="SignerDigitalExtLicSitesTh">Features</th>
-								<th class="SignerDigitalExtLicSitesTh" style="width:50px;">Action</th>
-							</tr>
-						</thead>
-						<tbody id="licenseSitesTableBody">
-							<!-- Table rows will be dynamically added here -->
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<span id="SDLicSitesErrMsg" style="color:red"></span>
-		</div>
-	</div>
-</div>
-
-
-
-
-
-
+</body>
 </html>
